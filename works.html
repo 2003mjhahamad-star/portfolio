@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hassan Ahamed | Selected Works</title>
+    <link rel="stylesheet" href="C:\Users\pc\Desktop\New folder\wors\works.css">
+<body>
+    <style>
+        :root {
+    --accent: #00adb5;
+    --bg: #050505;
+    --card-bg: #111;
+}
+
+body {
+    background-color: var(--bg);
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Header & Typography */
+.works-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 5%;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+.back-btn {
+    color: #00adb5; /* Your accent teal color */
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    
+    /* The Finishing Touches */
+    border: 1px solid #00adb5;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+/* What happens when you move your mouse over it */
+.back-btn:hover {
+    background-color: #00adb5;
+    color: #050505; /* Changes text to black when background turns teal */
+    box-shadow: 0 0 15px rgba(0, 173, 181, 0.4);
+    transform: translateY(-2px);
+}
+
+
+.works-hero {
+    padding: 100px 5%;
+    text-align: left;
+}
+
+.works-hero h1 {
+    font-family: 'Syncopate', sans-serif;
+    font-size: clamp(3rem, 10vw, 6rem);
+    line-height: 0.9;
+    margin: 0;
+}
+
+.outline {
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+}
+
+/* The Creative Gallery Grid */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: 300px;
+    gap: 20px;
+    padding: 0 5% 100px 5%;
+}
+
+.gallery-item {
+    position: relative;
+    background: var(--card-bg);
+    overflow: hidden;
+    border-radius: 4px;
+    transition: 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+/* Grid Variances */
+.large { grid-column: span 2; grid-row: span 2; }
+.tall {  grid-column: span 2; grid-row: span 2; }
+.wide { grid-column: span 2; background: linear-gradient(45deg, #111, #1a1a1a); }
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(40%);
+    transition: 0.5s;
+}
+
+/* Overlay Effect */
+.overlay {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 30px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.9));
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.gallery-item:hover .overlay { opacity: 1; }
+.gallery-item:hover img { transform: scale(1.05); filter: grayscale(0%); }
+
+.overlay span { color: var(--accent); font-size: 0.7rem; font-weight: 600; text-transform: uppercase; }
+.overlay h3 { margin: 5px 0 0 0; font-size: 1.2rem; }
+
+/* Technical Card Text */
+.tech-card-content {
+    padding: 40px;
+}
+.tech-card-content h3 { color: var(--accent); font-family: 'Syncopate', sans-serif; }
+
+.works-footer {
+    padding: 100px 5%;
+    border-top: 1px solid #222;
+    text-align: center;
+    color: #444;
+}
+.year{
+    color: #00adb5;
+    font-size: 20px;
+    font-style: italic;
+}
+.works-nav{
+
+    color: aquamarine;
+    font-size:20px;
+}
+
+    </style>
+
+ <nav class="works-nav">
+    <a href="C:\Users\pc\Desktop\New folder\hassan.html" class="back-btn">← Back to Profile</a>
+    <div class="works-logo">SELECTED WORKS</div>
+    <div class="year">2026</div>
+</nav>
+
+    <header class="works-hero">
+        <h1>BRIDGING<br><span class="outline">LOGIC AND ART</span></h1>
+    </header>
+
+    <main class="gallery-container">
+        <div class="gallery-item large">
+            <img src="img3.JPG" alt="Work 1">
+            <div class="overlay">
+                <span>Outing Photography</span>
+                <h3>Travel Around The World</h3>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="img4.png" alt="Work 2">
+            <div class="overlay">
+                <span>Graphic Design</span>
+                <h3>Cricket Tournament </h3>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="img1.jpg" alt="Work 3">
+            <div class="overlay">
+                <span>Visual Arts</span>
+                <h3>Nature Study</h3>
+            </div>
+        </div>
+
+        <div class="gallery-item tall">
+            <img src="img5.png" alt="Work 4">
+            <div class="overlay">
+                <span>Marketing</span>
+                <h3>AXEL Clothing Line</h3>
+            </div>
+            
+        </div>
+
+        <div class="gallery-item wide">
+            <div class="tech-card-content">
+                <span>Hardware Engineering</span>
+                <h3>High-Performance System Build</h3>
+                <p>Advanced diagnostic and restoration for professional workstations.</p>
+            </div>
+        </div>
+         
+    </main>
+
+    <footer class="works-footer">
+      <p> <a>2003mjhahamad@gmail.com</a> </p>
+        <p>Hassan Ahamed — Available for freelance opportunities.</p>
+    </footer>
+
+</body>
+</html>
